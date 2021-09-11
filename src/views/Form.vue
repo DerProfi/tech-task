@@ -23,7 +23,8 @@ export default {
   methods: {
     search() {
       this.$router.push({
-        name: 'Results'
+        name: 'Results',
+        query: {search: this.username}
       })
     }
   },
