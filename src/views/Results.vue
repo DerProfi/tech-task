@@ -31,14 +31,17 @@ export default {
     }
   },
   methods: {
-    back() {
+    back: function() {
       this.$router.push({
         name: 'Form'
       })
+    },
+    search: function(){
+      api(this.username)
     }
   },
   mounted() {
-    api();
+    this.search();
   }
 }
 </script>
