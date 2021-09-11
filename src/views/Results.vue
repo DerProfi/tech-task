@@ -27,6 +27,7 @@ export default {
   name: "Results",
   data(){
     return {
+      username: this.$route.query.search,
     }
   },
   methods: {

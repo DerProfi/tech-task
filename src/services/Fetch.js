@@ -8,5 +8,3 @@ export const api = async () => {
       console.log(err)
   }
 };
-
-
