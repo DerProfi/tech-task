@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { api } from "../services/Fetch";
 export default {
   name: "Results",
   data(){
@@ -34,6 +35,9 @@ export default {
         name: 'Form'
       })
     }
+  },
+  mounted() {
+    api();
   }
 }
 </script>
