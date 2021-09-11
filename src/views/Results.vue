@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <div>
+      <div v-if="userData.avatar_url">
         <h1>Information about user</h1>
         <article>
           <img :src="userData.avatar_url" alt="avatar">
@@ -13,8 +13,8 @@
           </div>
         </article>
       </div>
-      <div>
-        <p>There is no user called ...</p>
+      <div v-else>
+        <p>There is no user called "{{username}}"</p>
       </div>
       <button @click="back">Back</button>
     </section>
