@@ -4,12 +4,12 @@
       <div>
         <h1>Information about user</h1>
         <article>
-          <img src="#" alt="avatar">
+          <img :src="userData.avatar_url" alt="avatar">
           <div>
-            <p>Username</p>
-            <p>City</p>
-            <p>Company</p>
-            <p>Bio</p>
+            <p v-if="userData.name">{{userData.name}}</p>
+            <p v-if="userData.location">{{userData.location}}</p>
+            <p v-if="userData.company">{{userData.company}}</p>
+            <p v-if="userData.bio">{{userData.bio}}</p>
           </div>
         </article>
       </div>
