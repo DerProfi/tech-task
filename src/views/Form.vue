@@ -2,7 +2,7 @@
   <div>
     <section>
       <h1>Github user fetching</h1>
-      <form action="#" @submit="search">
+      <form action="#" @submit="search" v-on:submit.prevent>
         <input type="text" name="search" placeholder="username">
         <button type="submit">Search</button>
       </form>  
