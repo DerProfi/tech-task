@@ -16,14 +16,25 @@
       <div>
         <p>There is no user called ...</p>
       </div>
-      <button>Back</button>
+      <button @click="back">Back</button>
     </section>
   </div>
 </template>
 
 <script>
 export default {
-
+  name: "Results",
+  data(){
+    return {
+    }
+  },
+  methods: {
+    back() {
+      this.$router.push({
+        name: 'Form'
+      })
+    }
+  }
 }
 </script>
 
