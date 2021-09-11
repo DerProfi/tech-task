@@ -17,15 +17,21 @@ export default {
   name: "Form",
   data(){
     return {
-      username: ''
+      username: '',
+      errors: []
     }
   },
   methods: {
     search() {
-      this.$router.push({
+      if (this.username) {
+        this.$router.push({
         name: 'Results',
         query: {search: this.username}
-      })
+        })
+      }
+      else {
+        this.errors.push('Please enter a username.')
+      }
     }
   },
 };
