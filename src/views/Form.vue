@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <section>
       <h1>Github user fetching</h1>
       <form action="#">
