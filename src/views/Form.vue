@@ -2,6 +2,7 @@
   <div>
     <section>
       <h1>Github user fetching</h1>
+      <p v-if="errors.length"> {{errors.join(' ')}}</p>
       <!-- Submit prevent because the form is not connected, we just need the search method -->
       <form action="#" @submit="search" v-on:submit.prevent>
         <input type="text" name="search" placeholder="username" v-model="username">
