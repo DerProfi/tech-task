@@ -28,6 +28,7 @@ export default {
   data(){
     return {
       username: this.$route.query.search,
+      userData: {}
     }
   },
   methods: {
@@ -38,6 +39,7 @@ export default {
     },
     search: function(){
       api(this.username)
+      .then((data) => {this.userData = data})
     }
   },
   mounted() {
