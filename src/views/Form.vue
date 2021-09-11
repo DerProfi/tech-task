@@ -2,7 +2,7 @@
   <div>
     <section>
       <h1>Github user fetching</h1>
-      <form action="#">
+      <form action="#" @submit="search">
         <input type="text" name="search" placeholder="username">
         <button type="submit">Search</button>
       </form>  
@@ -14,5 +14,16 @@
 
 export default {
   name: "Form",
+  data(){
+    return {
+    }
+  },
+  methods: {
+    search() {
+      this.$router.push({
+        name: 'Results'
+      })
+    }
+  }
 };
 </script>
