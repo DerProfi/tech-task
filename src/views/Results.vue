@@ -3,7 +3,7 @@
     <section class="container box">
       <div v-if="userData.avatar_url">
         <h1>Information about user</h1>
-        <article>
+        <article class="container__content">
           <img :src="userData.avatar_url" alt="avatar">
           <div>
             <p v-if="userData.name">{{userData.name}}</p>

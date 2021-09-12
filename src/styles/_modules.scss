@@ -13,4 +13,9 @@
 
 .container{
   background-color: $secondary;
+  color: white;
+  &__content{
+    display: flex;
+    justify-content: space-around;
+  }
 }
