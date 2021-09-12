@@ -1,6 +1,7 @@
 <template>
   <div class="background box">
     <section class="container box">
+      <!-- If there is a user  -->
       <div v-if="userData.avatar_url">
         <h1>Information about user</h1>
         <article class="container__content">
@@ -13,6 +14,7 @@
           </div>
         </article>
       </div>
+      <!-- If there user doesnt exist  -->
       <div v-else>
         <p>There is no user called "{{username}}"</p>
       </div>
