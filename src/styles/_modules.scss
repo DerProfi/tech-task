@@ -1,7 +1,16 @@
 //Modules for reusable components
 @import './variables';
-.background{
+.box{
   width: 80%;
-  background-color: $primary;
   margin: 0 auto;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.background{
+  background-color: $primary;
+}
+
+.container{
+  background-color: $secondary;
 }

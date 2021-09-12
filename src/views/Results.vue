@@ -1,6 +1,6 @@
 <template>
-  <div class="background">
-    <section>
+  <div class="background box">
+    <section class="container box">
       <div v-if="userData.avatar_url">
         <h1>Information about user</h1>
         <article>
