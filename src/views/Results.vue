@@ -7,10 +7,10 @@
         <article class="container__content">
           <img :src="userData.avatar_url" alt="avatar">
           <div class="container__text">
-            <p v-if="userData.name">{{userData.name}}</p>
-            <p v-if="userData.location">{{userData.location}}</p>
-            <p v-if="userData.company">{{userData.company}}</p>
-            <p v-if="userData.bio">{{userData.bio}}</p>
+            <p v-if="userData.name"><strong>Name: </strong>{{userData.name}}</p>
+            <p v-if="userData.location"><strong>City: </strong>{{userData.location}}</p>
+            <p v-if="userData.company"><strong>Company: </strong>{{userData.company}}</p>
+            <p v-if="userData.bio"><strong>Bio: </strong>{{userData.bio}}</p>
           </div>
         </article>
       </div>
