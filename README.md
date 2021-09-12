@@ -1,13 +1,13 @@
 # Homeday Tech Task
 ## Table of contents
-* [About the project](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L7-L7)
+* [About the project](#about)
 * [Demo](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L11-L11)
 * [Built with](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L14-L14)
 * [Getting started](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L18-L18)
 * [## Testing](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L36-L36)
 * [Layout](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L41-L41)
 
-## About the project
+## About the project <a name="about"></a>
 
 Here is my solution to a coding challenge given to me by Homeday. The rough task was to write an app that uses the Github user API to search for Github users and display some information about them.
 
