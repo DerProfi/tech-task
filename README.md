@@ -1,8 +1,12 @@
 # Homeday Tech Task
 ## Table of contents
-* [About the project] <a >
-* [Technologies](#technologies)
-* [Setup](#setup)
+* [About the project](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L7-L7)
+* [Demo](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L11-L11)
+* [Built with](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L14-L14)
+* [Getting started](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L18-L18)
+* [## Testing](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L36-L36)
+* [Layout](https://github.com/DerProfi/tech-task/blob/e653e8cf7ce96d4892af4724c230e6d4232dae0a/README.md#L41-L41)
+
 ## About the project
 
 Here is my solution to a coding challenge given to me by Homeday. The rough task was to write an app that uses the Github user API to search for Github users and display some information about them.
@@ -34,14 +38,5 @@ git clone https://github.com/DerProfi/tech-task
 Since I'm not very familiar with testing yet, I've only tested the app on the most used browsers (Chrome, Firefox, Edge, Safari).
 I will add the unit testing as soon as I am confident here.
 
-## Styling
+## Layout
 I decided to use a desktop first approach, as this is also Homeday's approach, and added a breakpoint at 720px for mobile devices.
-
-.
-├── build                   # Compiled files (alternatively `dist`)
-├── docs                    # Documentation files (alternatively `doc`)
-├── src                     # Source files (alternatively `lib` or `app`)
-├── test                    # Automated tests (alternatively `spec` or `tests`)
-├── tools                   # Tools and utilities
-├── LICENSE
-└── README.md
