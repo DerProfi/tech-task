@@ -5,7 +5,7 @@
         <h1>Information about user</h1>
         <article class="container__content">
           <img :src="userData.avatar_url" alt="avatar">
-          <div>
+          <div class="container__text">
             <p v-if="userData.name">{{userData.name}}</p>
             <p v-if="userData.location">{{userData.location}}</p>
             <p v-if="userData.company">{{userData.company}}</p>
