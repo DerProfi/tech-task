@@ -17,5 +17,9 @@
   &__content{
     display: flex;
     justify-content: space-around;
+    img{
+      max-height: 10rem;
+      margin-right: 2rem;
+    }
   }
 }
