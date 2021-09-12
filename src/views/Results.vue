@@ -18,7 +18,7 @@
       <div v-else>
         <p>There is no user called "{{username}}"</p>
       </div>
-      <button @click="back">Back</button>
+      <button @click="back">New search</button>
     </section>
   </div>
 </template>
