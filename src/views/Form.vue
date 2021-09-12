@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="background">
     <section>
       <h1>Github user fetching</h1>
       <p v-if="errors.length"> {{errors.join(' ')}}</p>

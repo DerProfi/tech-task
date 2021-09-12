@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="background">
     <section>
       <div v-if="userData.avatar_url">
         <h1>Information about user</h1>

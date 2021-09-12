@@ -1,1 +1,7 @@
 //Modules for reusable components
+@import './variables';
+.background{
+  width: 80%;
+  background-color: $primary;
+  margin: 0 auto;
+}
