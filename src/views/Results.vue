@@ -3,7 +3,7 @@
     <section class="container box">
       <!-- If there is a user  -->
       <div v-if="userData.avatar_url">
-        <h1>Information about user</h1>
+        <h1>Information about {{username}}</h1>
         <article class="container__content">
           <img :src="userData.avatar_url" alt="avatar">
           <div class="container__text">
