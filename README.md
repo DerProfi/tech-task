@@ -1,24 +1,25 @@
-# homeday_codingchallenge
+# Homeday Tech Task
 
-## Project setup
-```
-npm install
-```
+## About the project
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Here is my solution to a coding challenge given to me by Homeday. The rough task was to write an app that uses the Github user API to search for Github users and display some information about them.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Built with
 
-### Lints and fixes files
-```
-npm run lint
-```
+I decided to write the app using Vue, as this is my framework of choice and it is used by Homeday.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Getting started
+### Prerequisites
+You need to install npm und your machine and listen to changes in CSS preprocessor files.
+```
+# Install dependencies
+$ npm install npm@latest -g
+
+# Listen to CSS preprocessor
+$ npm run compile:scss
+```
+### Instalation
+1. Clone the repo
+```
+git clone https://github.com/DerProfi/tech-task
+```
