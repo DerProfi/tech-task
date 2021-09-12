@@ -4,7 +4,7 @@
 * [Demo](#demo)
 * [Built with](#built)
 * [Getting started](#started)
-* [## Testing](#testing)
+* [Testing](#testing)
 * [Layout](#layout)
 
 ## About the project <a name="about"></a>
