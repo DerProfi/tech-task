@@ -1,8 +1,3 @@
-tell them what it is (with context)
-show them what it looks like in action
-show them how they use it
-tell them any other relevant details
-
 # Homeday Tech Task
 ## Table of contents
 * [About the project](#about)
