@@ -7,8 +7,7 @@ tell them any other relevant details
 ## Table of contents
 * [About the project](#about)
 * [Getting started](#started)
-* [Testing](#testing)
-* [Layout](#layout)
+* [Enhancements](#enhancements)
 
 ## About the project <a name="about"></a>
 
