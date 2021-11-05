@@ -1,39 +1,39 @@
 <template>
   <div class="background box">
-    <section class="container box">
+    <div class="container box">
       <h1>Github user fetching</h1>
-      <p v-if="errors.length"> {{errors.join(' ')}}</p>
+      <p v-if="errors.length">{{ errors.join(" ") }}</p>
       <!-- Submit prevent because the form is not connected, we just need the search method -->
-      <form action="#" @submit="search" v-on:submit.prevent>
-        <input type="text" name="search" placeholder="username" v-model="username">
-        <button type="submit">Search</button>
-      </form>  
-    </section>
+      <input-form @search="search"></input-form>
+    </div>
   </div>
 </template>
 
 <script>
-
+import inputForm from "../components/inputForm.vue"
 export default {
   name: "Form",
-  data(){
+  components: {
+    'input-form': inputForm,
+  },
+  data() {
     return {
-      username: '',
-      errors: []
-    }
+      username: "",
+      errors: [],
+    };
   },
   methods: {
-    search() {
+    search(payload) {
+      this.username = payload.username;
       if (this.username) {
         this.$router.push({
-        name: 'Results',
-        query: {search: this.username}
-        })
+          name: "Results",
+          query: { search: this.username },
+        });
+      } else {
+        this.errors.push("Please enter a username.");
       }
-      else {
-        this.errors.push('Please enter a username.')
-      }
-    }
+    },
   },
 };
 </script>

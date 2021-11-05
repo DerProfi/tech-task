@@ -2,21 +2,10 @@
   <div class="background box">
     <section class="container box">
       <!-- If there is a user  -->
-      <div v-if="userData.avatar_url">
-        <h1>Information about {{username}}</h1>
-        <article class="container__content">
-          <img :src="userData.avatar_url" alt="avatar">
-          <div class="container__text">
-            <p v-if="userData.name"><strong>Name: </strong>{{userData.name}}</p>
-            <p v-if="userData.location"><strong>City: </strong>{{userData.location}}</p>
-            <p v-if="userData.company"><strong>Company: </strong>{{userData.company}}</p>
-            <p v-if="userData.bio"><strong>Bio: </strong>{{userData.bio}}</p>
-          </div>
-        </article>
-      </div>
-      <!-- If there user doesnt exist  -->
+      <user-information v-if="userData.avatar_url" v-bind:userData="userData"></user-information>
+      <!-- If the user doesnt exist  -->
       <div v-else>
-        <p>There is no user called "{{username}}"</p>
+        <p>There is no user called "{{ username }}"</p>
       </div>
       <button @click="back">New search</button>
     </section>
@@ -24,32 +13,36 @@
 </template>
 
 <script>
-import { api } from "../services/Fetch";
+import { api } from "../services/Fetch"
+import userInformation from "../components/userInformation.vue"
+
 export default {
   name: "Results",
-  data(){
+  components: {
+    'user-information': userInformation,
+  },
+  data() {
     return {
       username: this.$route.query.search,
-      userData: {}
-    }
+      userData: {},
+    };
   },
   methods: {
-    back: function() {
+    back: function () {
       this.$router.push({
-        name: 'Form'
-      })
+        name: "Form",
+      });
     },
-    search: function(){
-      api(this.username)
-      .then((data) => {this.userData = data})
-    }
+    search: function () {
+      api(this.username).then((data) => {
+        this.userData = data;
+      });
+    },
   },
   mounted() {
     this.search();
-  }
-}
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
