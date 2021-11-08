@@ -4,7 +4,7 @@
       <h1>Github user fetching</h1>
       <p v-if="errors.length">{{ errors.join(" ") }}</p>
       <!-- Submit prevent because the form is not connected, we just need the search method -->
-      <input-form @search="search"></input-form>
+      <input-form @submit="search"></input-form>
     </div>
   </div>
 </template>

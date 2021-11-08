@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     emitEvent() {
-      this.$emit('search', {username: this.username})
+      this.$emit('submit', {username: this.username})
     }
   }
 }
