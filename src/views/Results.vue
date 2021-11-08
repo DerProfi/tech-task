@@ -15,7 +15,7 @@
 <script>
 // import  api  from "../services/Fetch"
 import userInformation from "../components/userInformation.vue"
-import axios from "axios";
+import { api } from "../services/Fetch";
 
 export default {
   name: "Results",
@@ -34,16 +34,12 @@ export default {
         name: "Form",
       });
     },
+    search: function(){
+      api(this.username)
+    },
   },
-  created() {
-    axios
-      .get(`https://api.github.com/users/${this.username}`)
-      .then(response => {
-        this.userData = response.data
-      })
-      .catch(error => {
-        console.log(error)
-      })
+   mounted() {
+    this.search();
   },
 };
 </script>
