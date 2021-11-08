@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  props: ['userData'],
+  props: ['userData', 'username'],
 }
 </script>
 

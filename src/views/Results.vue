@@ -2,7 +2,7 @@
   <div class="background box">
     <section class="container box">
       <!-- If there is a user  -->
-      <user-information v-if="userData.avatar_url" v-bind:userData="userData"></user-information>
+      <user-information v-if="userData.avatar_url" :userData="userData" :username="username" ></user-information>
       <!-- If the user doesnt exist  -->
       <div v-else>
         <p>There is no user called "{{ username }}"</p>
@@ -36,6 +36,7 @@ export default {
     },
     search: function(){
       api(this.username)
+      .then (result => this.userData = result)
     },
   },
    mounted() {
