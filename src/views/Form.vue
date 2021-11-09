@@ -14,7 +14,7 @@ import inputForm from "../components/inputForm.vue"
 export default {
   name: "Form",
   components: {
-    'input-form': inputForm,
+    inputForm,
   },
   data() {
     return {
