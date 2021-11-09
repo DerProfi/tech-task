@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form action="#" @submit="emitEvent" v-on:submit.prevent>
+    <form @submit.prevent="emitEvent">
       <input
         type="text"
         name="search"
