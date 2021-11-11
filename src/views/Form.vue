@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     search(payload) {
-      this.username = payload.username;
+      this.username = payload;
       if (this.username) {
         this.$router.push({
           name: "Results",
