@@ -1,5 +1,5 @@
 import form from '@/views/Form.vue'
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import inputForm from '@/components/inputForm'
 
 
@@ -24,7 +24,7 @@ describe('form ', () => {
   }
 
   test('on submit route to results', async ()   => {
-    const wrapper = shallowMount(form, {
+    const wrapper = mount(form, {
       data(){
         return {
           username: "derprofi",
