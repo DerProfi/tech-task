@@ -1,11 +1,14 @@
 <template>
   <div>
     <form @submit.prevent="emitEvent">
-      <input
+      <HdInput
+        class="input"
+        v-model="username"
+        :required="true"
         type="text"
         name="search"
-        placeholder="username"
-        v-model="username"
+        label="Username"
+        placeholder="Please enter a username."
       />
       <HdButton
       type="submit"
@@ -21,12 +24,13 @@
 </template> 
 
 <script>
-import { HdButton } from 'homeday-blocks';
+import { HdButton, HdInput } from 'homeday-blocks';
 import 'homeday-blocks/src/styles/main.scss';
 
 export default {
   components: {
-    HdButton
+    HdButton,
+    HdInput
   },
   data(){
     return{
@@ -41,6 +45,12 @@ export default {
 }
 </script>
 
+
 <style>
+form ::v-deep .input{
+  width: 80%;
+  margin: 0 auto;
+  color: black;
+}
 
 </style>
