@@ -42,11 +42,8 @@
   margin: 0 auto;
   color: black;
   @media screen and (max-width:720px) {
-    color: red;
     height: 3rem;
     margin-bottom: 1rem;
     font-size: 0.8rem;
+  }
 }
-}
-
-// .myprojclass ::v-deep .hd-lorem
