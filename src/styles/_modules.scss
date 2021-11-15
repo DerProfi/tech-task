@@ -7,6 +7,26 @@
   padding: 2rem;
 }
 
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  h1{
+    grid-column: 2/3;
+  }
+  .input-form{
+    grid-column: 2/3;
+    grid-row: 2/2;
+    align-self: center;
+  }
+  p{
+    grid-column: 2/3;
+    grid-row: 2/2;
+    margin: 0;
+    color: red;
+  }
+}
+
 .background{
   background-color: $primary;
 }

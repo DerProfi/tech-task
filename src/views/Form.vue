@@ -1,10 +1,10 @@
 <template>
   <div class="background box">
-    <div class="container box">
+    <div class="container grid">
       <h1>Github user fetching</h1>
-      <p v-if="errors.length">{{ errors.join(" ") }}</p>
+      <p id="container--error" v-if="errors.length">{{ errors.join(" ") }}</p>
       <!-- Submit prevent because the form is not connected, we just need the search method -->
-      <input-form @submit="search"></input-form>
+      <input-form @submit="search" class="input-form"></input-form>
     </div>
   </div>
 </template>
