@@ -15,16 +15,16 @@
   background-color: $secondary;
   color: white;
   &__content{
-    display: flex;
-    justify-content: space-around;
+    display: wrap;
+    justify-content: center;
     align-items: center;
     img{
       max-height: 10rem;
       margin-right: 2rem;
     }
-    @media screen and (max-width:720px) {
-      flex-wrap: wrap;
-      justify-content: center;
+    @media screen and (min-width:720px) {
+      flex-wrap: flex;
+      justify-content: space-around;
     }
   }
   &__text{
