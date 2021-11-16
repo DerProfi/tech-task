@@ -11,46 +11,47 @@
         placeholder="Please enter a username."
       />
       <HdButton
-      type="submit"
-      modifier="primary"
-      :isInDarkBackground="false"
-      iconSrc=""
-      :disabled="false"
+        type="submit"
+        modifier="primary"
+        :isInDarkBackground="false"
+        iconSrc=""
+        :disabled="false"
       >
-      Search
-    </HdButton>
+        Search
+      </HdButton>
     </form>
   </div>
-</template> 
+</template>
 
 <script>
-import { HdButton, HdInput } from 'homeday-blocks';
-import 'homeday-blocks/src/styles/main.scss';
+import { HdButton, HdInput } from "homeday-blocks";
+import "homeday-blocks/src/styles/main.scss";
 
 export default {
   components: {
     HdButton,
-    HdInput
+    HdInput,
   },
-  data(){
-    return{
+  data() {
+    return {
       username: "",
-    }
+    };
   },
   methods: {
     emitEvent() {
-      this.$emit('submit', {username: this.username})
-    }
-  }
-}
+      this.$emit("submit", { username: this.username });
+    },
+  },
+};
 </script>
 
-
-<style>
-form ::v-deep .input{
+<style lang="scss" scoped>
+.input {
   width: 80%;
   margin: 0 auto;
-  color: black;
+  color: red;
+  ::v-deep input {
+    margin: 10px;
+  }
 }
-
 </style>

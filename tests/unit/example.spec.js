@@ -1,5 +1,5 @@
-describe('My Component', () => {
-  it('renders successfully', () => {
-    expect(true).toBe(true)
-  })
-})
+describe("My Component", () => {
+  it("renders successfully", () => {
+    expect(true).toBe(true);
+  });
+});
