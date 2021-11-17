@@ -2,7 +2,9 @@
   <div class="background box">
     <div class="container box">
       <h1>Github user fetching</h1>
-      <p v-if="errors.length">{{ errors.join(" ") }}</p>
+      <p data-testid="errorDisplay" v-if="errors.length">
+        {{ errors.join(" ") }}
+      </p>
       <!-- Submit prevent because the form is not connected, we just need the search method -->
       <input-form @submit="search"></input-form>
     </div>
@@ -10,7 +12,7 @@
 </template>
 
 <script>
-import inputForm from "../components/inputForm.vue"
+import inputForm from "../components/inputForm.vue";
 export default {
   name: "Form",
   components: {
@@ -28,7 +30,7 @@ export default {
       if (this.username) {
         this.$router.push({
           name: "Results",
-          query: { search: this.username },
+          params: { username: this.username },
         });
       } else {
         this.errors.push("Please enter a username.");

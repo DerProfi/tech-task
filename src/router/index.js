@@ -12,13 +12,14 @@ const routes = [
     component: Form,
   },
   {
-    path: "/results",
+    path: "/results/:username",
     name: "Results",
     component: Results,
   },
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes,
 });
 
