@@ -23,11 +23,9 @@ describe("form ", () => {
 
   test("on submit route to results", async () => {
     const wrapper = mount(form, {
-      data() {
-        return {
-          username: "derprofi",
-          errors: [],
-        };
+      propsData: {
+        username: "derprofi",
+        errors: [],
       },
       mocks: {
         $router,
