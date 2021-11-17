@@ -38,12 +38,15 @@ export default {
         name: "Form",
       });
     },
-    search: function () {
-      api(this.username).then((result) => (this.userData = result));
+    async search() {
+      console.log(this.userData);
+      const response = await api(this.username);
+      this.userData = response;
+      this.$forceUpdate();
     },
   },
-  mounted() {
-    this.search();
+  async mounted() {
+    await this.search();
   },
 };
 </script>
