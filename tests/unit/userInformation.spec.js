@@ -28,7 +28,9 @@ describe(
           },
         },
       });
-      expect(wrapper.find("h1").text()).toEqual("Information about derprofi");
+      expect(wrapper.find('[data-testid="informationHeading"]').text()).toEqual(
+        "Information about derprofi"
+      );
     });
   })
 );

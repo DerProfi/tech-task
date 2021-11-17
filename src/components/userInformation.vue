@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="userData.avatar_url">
-      <h1>Information about {{ username }}</h1>
+      <h1 data-testid="informationHeading">Information about {{ username }}</h1>
       <div class="container__content">
         <img :src="userData.avatar_url" alt="avatar" />
         <div class="container__text">
