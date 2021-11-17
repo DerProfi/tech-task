@@ -1,41 +1,41 @@
-import form from '@/views/Form.vue'
-import { mount } from '@vue/test-utils'
-import inputForm from '@/components/inputForm'
+import form from "@/views/Form.vue";
+import { mount } from "@vue/test-utils";
+import inputForm from "@/components/inputForm";
 
-
-describe('form ', () => {
-  test('error displaying', () => {
+describe("form ", () => {
+  test("error displaying", () => {
     const wrapper = mount(form, {
-      data(){
+      data() {
         return {
           username: {},
-          errors: ["Please enter a username."]
-        }
-      }
-    })
-  expect(wrapper.find('p').text()).toMatch('Please enter a username.')
-  })
-})
+          errors: ["Please enter a username."],
+        };
+      },
+    });
+    expect(wrapper.find('[data-testid="errorDisplay"]').text()).toMatch(
+      "Please enter a username."
+    );
+  });
+});
 
-describe('form ', () => {
-  
+describe("form ", () => {
   const $router = {
-    name: "Results"
-  }
+    name: "Results",
+  };
 
-  test('on submit route to results', async ()   => {
+  test("on submit route to results", async () => {
     const wrapper = mount(form, {
-      data(){
+      data() {
         return {
           username: "derprofi",
-          errors: []
-        }
+          errors: [],
+        };
       },
       mocks: {
-        $router
-      }
-    })
-    await wrapper.findComponent(inputForm).trigger('submit')
-    expect(wrapper.vm.$router.name).toBe($router.name)
-  })
-})
+        $router,
+      },
+    });
+    await wrapper.findComponent(inputForm).trigger("submit");
+    expect(wrapper.vm.$router.name).toBe($router.name);
+  });
+});

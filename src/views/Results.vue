@@ -2,7 +2,11 @@
   <div class="background box">
     <section class="container box">
       <!-- If there is a user  -->
-      <user-information v-if="userData.avatar_url" :userData="userData" :username="username" ></user-information>
+      <user-information
+        v-if="userData.avatar_url"
+        :userData="userData"
+        :username="username"
+      ></user-information>
       <!-- If the user doesnt exist  -->
       <div v-else>
         <p>There is no user called "{{ username }}"</p>
@@ -14,13 +18,13 @@
 
 <script>
 // import  api  from "../services/Fetch"
-import userInformation from "../components/userInformation.vue"
+import userInformation from "../components/userInformation.vue";
 import { api } from "../services/Fetch";
 
 export default {
   name: "Results",
   components: {
-    'user-information': userInformation,
+    "user-information": userInformation,
   },
   data() {
     return {
@@ -34,12 +38,11 @@ export default {
         name: "Form",
       });
     },
-    search: function(){
-      api(this.username)
-      .then (result => this.userData = result)
+    search: function () {
+      api(this.username).then((result) => (this.userData = result));
     },
   },
-   mounted() {
+  mounted() {
     this.search();
   },
 };

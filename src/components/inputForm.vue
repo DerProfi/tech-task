@@ -10,23 +10,21 @@
       <button type="submit">Search</button>
     </form>
   </div>
-</template> 
+</template>
 
 <script>
 export default {
-  data(){
-    return{
+  data() {
+    return {
       username: "",
-    }
+    };
   },
   methods: {
     emitEvent() {
-      this.$emit('submit', this.username)
-    }
-  }
-}
+      this.$emit("submit", this.username);
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

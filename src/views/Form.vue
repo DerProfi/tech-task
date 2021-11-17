@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import inputForm from "../components/inputForm.vue"
+import inputForm from "../components/inputForm.vue";
 export default {
   name: "Form",
   components: {
