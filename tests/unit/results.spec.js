@@ -50,7 +50,7 @@ test("should fetch user", async () => {
     },
   };
   axios.get.mockResolvedValue(resp);
-  const wrapper = mount(results, {
+  const wrapper = await mount(results, {
     mocks: {
       $route,
     },
@@ -58,5 +58,5 @@ test("should fetch user", async () => {
   await wrapper.vm.$nextTick();
   await wrapper.vm.$forceUpdate();
   console.log(wrapper.html());
-  expect(wrapper.find("h1").innerText).toEqual("Information about derprofi");
+  expect(wrapper.html()).toContain("<h1>Information about derprofi</h1>");
 });
