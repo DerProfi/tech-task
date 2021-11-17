@@ -12,9 +12,7 @@ describe("form ", () => {
         };
       },
     });
-    expect(wrapper.find('[data-testid="errorDisplay"]').text()).toMatch(
-      "Please enter a username."
-    );
+    expect(wrapper.find("p").text()).toMatch("Please enter a username.");
   });
 });
 
