@@ -57,7 +57,7 @@ test("should fetch user", async () => {
   });
   await wrapper.vm.$nextTick();
   await wrapper.vm.$forceUpdate();
-  expect(wrapper.html()).toContain(
-    '<h1 data-testid="informationHeading">Information about derprofi</h1>'
+  expect(wrapper.find('[data-testid="informationHeading"]').text()).toMatch(
+    "Information about derprofi"
   );
 });

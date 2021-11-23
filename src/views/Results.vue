@@ -39,14 +39,13 @@ export default {
       });
     },
     async search() {
-      console.log(this.userData);
       const response = await api(this.username);
       this.userData = response;
       this.$forceUpdate();
     },
   },
-  async mounted() {
-    await this.search();
+  mounted() {
+    this.search();
   },
 };
 </script>
