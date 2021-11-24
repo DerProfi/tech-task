@@ -17,7 +17,6 @@
 </template>
 
 <script>
-// import  api  from "../services/Fetch"
 import userInformation from "../components/userInformation.vue";
 import { api } from "../services/Fetch";
 

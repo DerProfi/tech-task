@@ -1,6 +1,5 @@
 import form from "@/views/Form.vue";
 import { mount } from "@vue/test-utils";
-import inputForm from "@/components/inputForm";
 
 describe("form ", () => {
   test("error displaying", async () => {
@@ -19,7 +18,6 @@ describe("form ", () => {
         $router,
       },
     });
-    // await wrapper.findComponent(inputForm).trigger("submit");
     await wrapper.vm.search("derprofi");
     expect($router).toHaveLength(1);
   });
