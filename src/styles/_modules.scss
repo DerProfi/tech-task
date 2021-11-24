@@ -1,49 +1,37 @@
 //Modules for reusable components
-@import './variables';
-.box{
-  width: 80%;
+@import "./variables";
+.box {
+  width: 90%;
   margin: 0 auto;
   border-radius: 5px;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
-.background{
+.background {
   background-color: $primary;
 }
 
-.container{
+.container {
   background-color: $secondary;
   color: white;
-  &__content{
+  &__content {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    img{
+    img {
       max-height: 10rem;
       margin-right: 2rem;
     }
-    @media screen and (max-width:720px) {
-        flex-wrap: wrap;
-        justify-content: center;
-      img{
+    @media screen and (max-width: 720px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      img {
         margin: 0 auto;
       }
-
     }
   }
-  &__text{
+  &__text {
     text-align: left;
     max-width: 60%;
-  }
-}
-
-.input{
-  width: 80%;
-  margin: 0 auto;
-  color: black;
-  @media screen and (max-width:720px) {
-    height: 3rem;
-    margin-bottom: 1rem;
-    font-size: 0.8rem;
   }
 }

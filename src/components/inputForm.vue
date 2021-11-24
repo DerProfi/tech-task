@@ -46,12 +46,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.input {
-  width: 80%;
+.input{
+  color: black;
+  width: 70%;
   margin: 0 auto;
-  color: red;
-  ::v-deep input {
-    margin: 10px;
-  }
 }
 </style>
