@@ -41,7 +41,7 @@ export default {
     async search() {
       const response = await api(this.username);
       this.userData = response;
-      this.$forceUpdate();
+      // this.$forceUpdate();
     },
   },
   mounted() {

@@ -19,7 +19,9 @@ describe("form ", () => {
         $router,
       },
     });
-    await wrapper.findComponent(inputForm).trigger("submit");
-    expect($router).toHaveLength(0);
+    // await wrapper.findComponent(inputForm).trigger("submit");
+    await wrapper.vm.search("derprofi");
+    console.log(wrapper.html());
+    expect($router).toHaveLength(1);
   });
 });
