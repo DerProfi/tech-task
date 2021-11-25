@@ -28,9 +28,14 @@ export default {
   },
   data() {
     return {
-      username: this.$route.params.username,
       userData: {},
     };
+  },
+  props:{
+    username: {
+      type: String,
+      required: true
+    }
   },
   methods: {
     back: function () {

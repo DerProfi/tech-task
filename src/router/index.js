@@ -10,11 +10,13 @@ const routes = [
     path: "/",
     name: "Form",
     component: Form,
+    props: true,
   },
   {
     path: "/results/:username",
     name: "Results",
     component: Results,
+    props: true,
   },
 ];
 
