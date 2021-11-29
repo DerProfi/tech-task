@@ -2,7 +2,11 @@
   <div class="background box">
     <section class="container box">
       <!-- If there is a user  -->
-      <user-information v-if="userData.avatar_url" :userData="userData" :username="username" ></user-information>
+      <user-information
+        v-if="userData.avatar_url"
+        :userData="userData"
+        :username="username"
+      ></user-information>
       <!-- If the user doesnt exist  -->
       <div v-else>
         <p>There is no user called "{{ username }}"</p>
@@ -24,9 +28,14 @@ export default {
   },
   data() {
     return {
-      username: this.$route.query.search,
       userData: {},
     };
+  },
+  props:{
+    username: {
+      type: String,
+      required: true
+    }
   },
   methods: {
     back: function () {
