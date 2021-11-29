@@ -11,20 +11,30 @@
       <div v-else>
         <p>There is no user called "{{ username }}"</p>
       </div>
-      <button @click="back">New search</button>
+      <HdButton
+        @click="back"
+        modifier="primary"
+        :isInDarkBackground="false"
+        iconSrc=""
+        :disabled="false"
+      >
+        New search
+      </HdButton>
     </section>
   </div>
 </template>
 
 <script>
 // import  api  from "../services/Fetch"
-import userInformation from "../components/userInformation.vue"
+import userInformation from "../components/userInformation.vue";
 import { api } from "../services/Fetch";
+import { HdButton } from "homeday-blocks";
 
 export default {
   name: "Results",
   components: {
-    'user-information': userInformation,
+    userInformation,
+    HdButton,
   },
   data() {
     return {
@@ -43,12 +53,11 @@ export default {
         name: "Form",
       });
     },
-    search: function(){
-      api(this.username)
-      .then (result => this.userData = result)
+    search: function () {
+      api(this.username).then((result) => (this.userData = result));
     },
   },
-   mounted() {
+  mounted() {
     this.search();
   },
 };

@@ -13,6 +13,10 @@
 
 <script>
 import inputForm from "../components/inputForm.vue";
+<<<<<<< HEAD
+=======
+
+>>>>>>> blocks
 export default {
   name: "Form",
   components: {
