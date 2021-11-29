@@ -44,15 +44,10 @@ test("should fetch user", async () => {
   const resp = {
     data: user,
   };
-  const $route = {
-    query: {
-      search: "derprofi",
-    },
-  };
   axios.get.mockResolvedValue(resp);
   const wrapper = await mount(results, {
-    mocks: {
-      $route,
+    propsData: {
+      username: "derprofi",
     },
   });
   await wrapper.vm.$nextTick();
