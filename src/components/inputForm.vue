@@ -39,17 +39,10 @@ export default {
   },
   methods: {
     emitEvent() {
-<<<<<<< HEAD
-      this.$emit('submit', this.username)
-    }
-  }
-}
-=======
       this.$emit("submit", { username: this.username });
     },
   },
 };
->>>>>>> blocks
 </script>
 
 <style lang="scss" scoped>
