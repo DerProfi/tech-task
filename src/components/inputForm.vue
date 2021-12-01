@@ -11,6 +11,7 @@
         placeholder="Please enter a username."
       />
       <HdButton
+        class="button"
         type="submit"
         modifier="primary"
         :isInDarkBackground="false"
@@ -46,9 +47,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.input{
-  color: black;
-  width: 70%;
+.button{
+  display: block;
   margin: 0 auto;
 }
 </style>
