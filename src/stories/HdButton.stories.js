@@ -1,23 +1,19 @@
 import { HdButton } from "homeday-blocks";
-import { action } from "@storybook/addon-actions";
 
 export default {
   title: "Components/Button",
   component: HdButton,
+  argTypes: {
+    onClick: {
+      action: "onCLick",
+    },
+  },
 };
 
-const Template = () => ({
+const Template = (argTypes) => ({
+  props: Object.keys(argTypes),
   components: { HdButton },
-  setup() {
-    return {};
-  },
-  template: `<HdButton>Press</HdButton>`,
-});
-
-export const HdButtonAction = () => ({
-  render() {
-    return <HdButton onClick={action("click")}>Press</HdButton>;
-  },
+  template: `<HdButton @click="onClick">Press</HdButton>`,
 });
 
 export const Default = Template.bind({});
