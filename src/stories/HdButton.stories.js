@@ -1,16 +1,23 @@
-// import MyButton from './Button.vue';
 import { HdButton } from "homeday-blocks";
-// More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
+import { action } from "@storybook/addon-actions";
 
 export default {
-  title: "Example/Button",
+  title: "Components/Button",
   component: HdButton,
 };
 
-// More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = () => ({
   components: { HdButton },
-  template: "<HdButton>Hello world</HdButton>",
+  setup() {
+    return {};
+  },
+  template: `<HdButton>Press</HdButton>`,
 });
 
-export const Primary = Template.bind({});
+export const HdButtonAction = () => ({
+  render() {
+    return <HdButton onClick={action("click")}>Press</HdButton>;
+  },
+});
+
+export const Default = Template.bind({});
